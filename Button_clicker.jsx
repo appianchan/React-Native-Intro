@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
+import { Text, View, StyleSheet, Button, Linking } from 'react-native';
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
 import Switch_Now from './components/Untitled_file'
@@ -37,6 +37,7 @@ export default class App extends React.Component {
           <Switch_Now turn_dial={this.switchme} switch_value={this.state.switch_counter} />
         </View>
 
+        <Text onPress={() => Linking.openURL('www.google.com')}></Text>
 
         <Button style={styles.button} onPress={this.clickme.bind(this)} title='sup' />
       </View>
