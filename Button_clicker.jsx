@@ -33,7 +33,10 @@ export default class App extends React.Component {
           <Text style={styles.text} onPress={this.clickme.bind(this)}>{this.state.count}</Text>
           <Text style={styles.text}>{this.state.label} </Text>
         </View>
-        <Switch_Now turn_dial={this.switchme} switch_value={this.state.switch_counter} />
+        <View style={styles.the_switch}>
+          <Switch_Now turn_dial={this.switchme} switch_value={this.state.switch_counter} />
+        </View>
+
 
         <Button style={styles.button} onPress={this.clickme.bind(this)} title='sup' />
       </View>
@@ -58,5 +61,11 @@ const styles = StyleSheet.create({
   },
   button: {
     color: 'red',
+  },
+  the_switch: {
+    alignItems: 'center',
+    marginRight: '200px',
+    marginTop: '10px',
+    marginBottom: '10px'
   }
 })
